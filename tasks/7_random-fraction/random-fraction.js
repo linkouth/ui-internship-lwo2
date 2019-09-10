@@ -4,5 +4,6 @@
  * @return {Number}
  */
 export function randomFraction() {
-  return Math.round(Math.random() * 10) / 10;
+  let random = Math.random() * 10
+  return Math.round(random) / 10;
 }
