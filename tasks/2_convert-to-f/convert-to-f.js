@@ -5,9 +5,5 @@
  * @return {*}
  */
 export function convertToF(celsius) {
-  let fahrenheit;
-
-  fahrenheit = celsius * 9 / 5 + 32;
-
-  return fahrenheit;
+  return celsius * 9 / 5 + 32;
 }
