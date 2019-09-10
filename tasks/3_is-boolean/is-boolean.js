@@ -5,5 +5,5 @@
  * @return {Boolean}
  */
 export function isBoolean(bool) {
-  return typeof(bool) === 'boolean';
+  return typeof bool === 'boolean';
 }
