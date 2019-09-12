@@ -7,6 +7,7 @@
  */
 export function titleCase(str) {
   let words = str.toLowerCase().split(' ');
-  words = words.map((word) => word.charAt(0).toUpperCase() + word.substr(1));
-  return words.join(' ');
+  return words
+      .map((word) => word.charAt(0).toUpperCase() + word.substr(1))
+      .join(' ');
 }

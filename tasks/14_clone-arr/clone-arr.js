@@ -5,9 +5,5 @@
  * @return {Array<*>}
  */
 export function cloneArr(arr) {
-  let clonedArray = [];
-  arr.forEach((element) => {
-    clonedArray.push(element);
-  });
-  return clonedArray;
+  return Array.from(arr);
 }

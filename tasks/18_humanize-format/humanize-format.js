@@ -12,14 +12,14 @@ export function humanizeFormat(number) {
   let stringNumber = number.toString();
   let lastChar = stringNumber.substring(
       stringNumber.length - 1, stringNumber.length);
-  if (lastChar === '1') {
-    return stringNumber + 'st';
+  switch (lastChar) {
+    case '1':
+      return stringNumber + 'st';
+    case '2':
+      return stringNumber + 'nd';
+    case '3':
+      return stringNumber + 'rd';
+    default:
+      return stringNumber + 'th';
   }
-  if (lastChar === '2') {
-    return stringNumber + 'nd';
-  }
-  if (lastChar === '3') {
-    return stringNumber + 'rd';
-  }
-  return stringNumber + 'th';
 }
