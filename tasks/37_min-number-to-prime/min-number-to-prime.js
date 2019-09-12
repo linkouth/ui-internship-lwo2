@@ -1,5 +1,7 @@
 /**
- * minNumberToPrime - 
+ * minNumberToPrime - find minimum number to be inserted
+ * in a list, so that sum of all elements of list should
+ * equal the closest prime number
  *
  * @param {Array<Number>} arr
  * @return {Number}
@@ -13,7 +15,7 @@ export function minNumberToPrime(arr) {
     return true;
   };
   let ans = sum;
-  while(!isPrime(ans)) {
+  while (!isPrime(ans)) {
     ans++;
   }
   return ans - sum;
