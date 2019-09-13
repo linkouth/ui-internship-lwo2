@@ -7,8 +7,8 @@
  * @return {Boolean}
  */
 export function checkLetters(arr) {
-  let firstString = arr[0].toLowerCase();
-  let secondString = arr[1].toLowerCase();
+  const firstString = arr[0].toLowerCase();
+  const secondString = arr[1].toLowerCase();
   for (const char of secondString) {
     if (firstString.indexOf(char) === -1) {
       return false;
