@@ -1,6 +1,6 @@
-import { removeDuplicates } from './remove-duplicates';
+// import { removeDuplicates } from './remove-duplicates';
 
-describe('remove-duplicates', () => {
+xdescribe('remove-duplicates', () => {
     test(`removeDuplicates([1]) should return [1]`, () => {
         expect(removeDuplicates([1])).toEqual([1]);
     });
