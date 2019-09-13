@@ -3,7 +3,10 @@ export class God {
    * @return {Array<Human>}
    */
   static create() {
-    return [new Man('Adam'), new Woman('Eve')];
+    const man = new Man('Adam');
+    const woman = new Woman('Eve');
+
+    return [man, woman];
   }
 }
 
