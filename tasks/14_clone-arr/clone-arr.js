@@ -5,5 +5,5 @@
  * @return {Array<*>}
  */
 export function cloneArr(arr) {
-  return Array.from(arr);
+  return [...arr];
 }
