@@ -7,7 +7,7 @@
  */
 export function arrayPlusArray(arr1, arr2) {
   let resultArray = [];
-  let minLenght = Math.min(arr1.length, arr2.length);
+  const minLenght = Math.min(arr1.length, arr2.length);
   for (let i = 0; i < minLenght; i++) {
     resultArray.push(arr1[i] + arr2[i]);
   }

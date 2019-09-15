@@ -18,7 +18,7 @@ export function maxTripletSum(numbers) {
  */
 export function maxNSum(n) {
   return function(numbers) {
-    let sortedNumbers = numbers
+    const sortedNumbers = numbers
         .filter((value, index) => index === numbers.indexOf(value))
         .sort((a, b) => a - b);
     return sortedNumbers

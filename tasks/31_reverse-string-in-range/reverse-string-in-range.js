@@ -7,7 +7,7 @@
  * @return {String}
  */
 export function reverseStringInRange(str, range) {
-  let reveredSubstring = str.substring(range[0], range[1] + 1)
+  const reveredSubstring = str.substring(range[0], range[1] + 1)
       .split('').reverse().join('');
   return str.substring(0, range[0]) +
         reveredSubstring +
