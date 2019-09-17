@@ -7,14 +7,11 @@
  */
 export function arrayPlusArray(arr1, arr2) {
   let resultArray = [];
-  const minLenght = Math.min(arr1.length, arr2.length);
-  for (let i = 0; i < minLenght; i++) {
+  const minLength = Math.min(arr1.length, arr2.length);
+  for (let i = 0; i < minLength; i++) {
     resultArray.push(arr1[i] + arr2[i]);
   }
-  if (minLenght === arr1.length) {
-    resultArray = resultArray.concat(arr2.slice(minLenght));
-  } else {
-    resultArray = resultArray.concat(arr1.slice(minLenght));
-  }
-  return resultArray;
+  return (minLength === arr1.length) ?
+  resultArray.concat(arr2.slice(minLength)):
+  resultArray = resultArray.concat(arr1.slice(minLength));
 }
