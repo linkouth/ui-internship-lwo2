@@ -1,9 +1,11 @@
 /**
  * findCloseIndex - return the index of the matching closing bracket
- *
- * @param {String} str
- * @param {Number} index
- * @return {Number}
+ * @example
+ * findCloseIndex('((1)23(45))(aB)', 1);
+ * // return 3
+ * @param {String} str input string to match
+ * @param {Number} index propably index of the opening bracket
+ * @return {Number} index of the matching closing bracket
  */
 export function findCloseIndex(str, index) {
   if (str[index] !== '(') return -1;

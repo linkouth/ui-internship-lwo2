@@ -1,7 +1,10 @@
 /**
  * followTheSpy - determine the routes he will
  * take in his every journey
- *
+ * @example
+ * followTheSpy([['USA', 'BRA'], ['JPN', 'PHL'], ['UAE', 'JPN'],
+ * ['BRA', 'UAE']]);
+ * // return 'USA, BRA, UAE, JPN, PHL'
  * @param {Array<Array<String>>} pairs
  * @return {String}
  */

@@ -2,7 +2,12 @@
  * runningAverage - returns a callable function object
  * updating the series with each given value and calculate
  * the current average
- *
+ * @example
+ * const rAvg = runningAverage();
+ * rAvg(10);
+ * // return 10
+ * rAvg(11);
+ * // return 10.5
  * @return {Function}
  */
 export function runningAverage() {

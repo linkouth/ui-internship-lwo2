@@ -1,7 +1,9 @@
 /**
  * stringExpansion - the numeric values represent the
  * occurrence of each letter preceding that numeric value
- *
+ * @example
+ * stringExpansion('3D2a5d2f');
+ * // return 'DDDaadddddff'
  * @param {String} str
  * @return {String}
  */

@@ -1,9 +1,11 @@
 /**
  * sortByBits - sort an array of 32-bit integers
  * in ascending order of the number of on bits they have
- *
- * @param {Array<Number>} arr
- * @return {Array<Number>}
+ * @example
+ * sortByBits([3, 8, 3, 6, 5, 7, 9, 1];
+ * //return [1, 8, 3, 3, 5, 6, 9, 7]
+ * @param {Array<Number>} arr input array
+ * @return {Array<Number>} output sorted array
  */
 export function sortByBits(arr) {
   const getOnesAtNumber = (number) => {

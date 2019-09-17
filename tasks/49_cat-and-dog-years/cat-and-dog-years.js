@@ -1,7 +1,9 @@
 /**
  * humanYearsCatYearsDogYears - returns their respective ages
  * now as humanYears, catYears, dogYears
- *
+ * @example
+ * humanYearsCatYearsDogYears(2);
+ * // return [2, 24, 24]
  * @param {Number} humanYears
  * @return {Array<Number>}
  */

@@ -1,24 +1,46 @@
 /**
- * class SimTime
+ * SimTime - simulate time and mess with it
  */
-export class SimTime {
-  constructor() {
-    this.speed = 1;
-    this.currentSimtime = 0;
-    this.currentRealtime = 0;
-  }
+export function SimTime() {
+  this.speed = 1;
+  this.currentSimtime = 0;
+  this.currentRealtime = 0;
 
-  get() {
+  /**
+   * get - returns the current time withing the simulation
+   * @example
+   * sim.get();
+   * //return 10
+   * @return {Number} time withing the simulation
+   */
+  this.get = () => {
     return this.currentSimtime;
-  }
+  };
 
-  setSpeed(newSpeed) {
+  /**
+   * setSpeed - the simulation speed is set to new_speed
+   * @example
+   * sim.setSpeed(3);
+   * // void
+   * @param {Number} newSpeed
+   * @return {void}
+   */
+  this.setSpeed = (newSpeed) => {
     this.speed = newSpeed;
-  }
+  };
 
-  update(currentRealtime) {
+  /**
+   * update - set realtime, calculates the change in
+   * realtime, and therefore the change in simulated time
+   * @example
+   * sim.update(15);
+   * // void
+   * @param {Number} currentRealtime
+   * @return {void}
+   */
+  this.update = (currentRealtime) => {
     const diff = currentRealtime - this.currentRealtime;
     this.currentRealtime = currentRealtime;
     this.currentSimtime += diff * this.speed;
-  }
+  };
 }

@@ -2,7 +2,9 @@
  * findEqualIndex - find an index N where the sum of
  * the integers to the left of N is equal to the sum
  * of the integers to the right of N
- *
+ * @example
+ * findEqualIndex([1, 2, 3, 4, 3, 2, 1])
+ * // return 3
  * @param {Array<Number>} arr
  * @return {Number}
  */
