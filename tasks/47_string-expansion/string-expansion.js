@@ -10,11 +10,8 @@
 export function stringExpansion(str) {
   let result = '';
   let repeatCount = 0;
-  const isLetter = (arg) => {
-    return isNaN(Number.parseInt(arg));
-  };
   for (let i = 0; i < str.length; i++) {
-    if (isLetter(str[i])) {
+    if (isNotNumber(str[i])) {
       if (repeatCount > 0) {
         result += str[i].repeat(repeatCount);
       } else {
@@ -26,3 +23,17 @@ export function stringExpansion(str) {
   }
   return result;
 }
+
+/**
+ * isNotNumber - checks is arg a number or not
+ * @example
+ * // return true
+ * isNotNumber('A');
+ * // return false
+ * isNotNumber('1');
+ * @param {String} arg
+ * @return {Boolean}
+ */
+const isNotNumber = (arg) => {
+  return isNaN(Number.parseInt(arg));
+};

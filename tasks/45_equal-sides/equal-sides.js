@@ -9,7 +9,9 @@
  * @return {Number}
  */
 export function findEqualIndex(arr) {
-  if (arr.length < 2) return 0;
+  if (arr.length < 2) {
+    return 0;
+  }
   let leftSideSum = 0;
   let rightSideSum = arr.slice(1).reduce((acc, val) => acc + val, 0);
   let idx = 1;
