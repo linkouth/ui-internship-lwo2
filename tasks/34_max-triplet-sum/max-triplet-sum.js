@@ -17,12 +17,11 @@ export function maxTripletSum(numbers) {
  * @return {Function}
  */
 export function maxNSum(n) {
-  return function(numbers) {
-    const sortedNumbers = numbers
-        .filter((value, index) => index === numbers.indexOf(value))
-        .sort((a, b) => a - b);
-    return sortedNumbers
-        .slice(sortedNumbers.length - n)
+  return (numbers) => {
+    return numbers
+        .filter((value, index) => index === numbers.lastIndexOf(value))
+        .sort((a, b) => b - a)
+        .slice(0, n)
         .reduce((acc, val) => acc + val, 0);
   };
 }
