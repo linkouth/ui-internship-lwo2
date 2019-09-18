@@ -11,8 +11,7 @@
  * @return {Array<*>}
  */
 export function diffArray(arr1, arr2) {
-  let result = [];
-  result = result.concat(arr1.filter((element) => !arr2.includes(element)));
-  result = result.concat(arr2.filter((element) => !arr1.includes(element)));
-  return result;
+  return []
+      .concat(arr1.filter((element) => !arr2.includes(element)))
+      .concat(arr2.filter((element) => !arr1.includes(element)));
 }

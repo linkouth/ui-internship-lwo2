@@ -8,6 +8,7 @@
  */
 export function abbreviated(str) {
   const words = str.split(' ');
-  let result = [words[0]].concat(words.slice(1).map((word) => word[0] + '.'));
-  return result.join(' ');
+  return [words[0]]
+      .concat(words.slice(1).map((word) => word[0] + '.'))
+      .join(' ');
 }
