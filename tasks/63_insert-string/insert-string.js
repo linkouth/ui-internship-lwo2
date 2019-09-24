@@ -10,10 +10,8 @@
  * @return {String}
  */
 export function insert(str, insertable, position = 0) {
-  if (insertable === undefined) return str;
+  if (!insertable) return str;
   return position === 0 ?
   insertable + str :
-  str.substring(0, position) +
-  insertable +
-  str.slice(position);
+  str.substring(0, position) + insertable + str.slice(position);
 }

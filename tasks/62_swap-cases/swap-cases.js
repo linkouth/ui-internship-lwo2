@@ -11,7 +11,6 @@ export function swapCases(str) {
   return str
       .split('')
       .map((char) => char.charCodeAt() <= 'Z'.charCodeAt() ?
-        char.toLowerCase() :
-        char.toUpperCase())
+        char.toLowerCase() : char.toUpperCase())
       .join('');
 }

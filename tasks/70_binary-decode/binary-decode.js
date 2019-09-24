@@ -8,8 +8,7 @@
  * @return {String}
  */
 export function binaryDecode(str) {
-  return str === undefined ? '' :
-  str
+  return !str ? '' : str
       .split(' ')
       .map((word) => String.fromCharCode(Number.parseInt(word, 2)))
       .join('');

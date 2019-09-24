@@ -7,7 +7,7 @@
  * @return {Array<*>}
  */
 export function unpackArray(arr) {
-  let result = [];
+  const result = [];
   const flat = (array) => {
     for (const element of array) {
       if (Array.isArray(element)) {
