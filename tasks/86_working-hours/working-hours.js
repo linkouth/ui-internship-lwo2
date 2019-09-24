@@ -52,7 +52,7 @@
  */
 export function formatWorkingHours(days) {
   const schedule = days.reduce((schedule, day) => {
-    schedule[day.day.toUpperCase()] = day.from + ' - ' + day.to;
+    schedule[day.day.toUpperCase()] = `${day.from} - ${day.to}`;
     return schedule;
   }, {});
 
@@ -62,7 +62,8 @@ export function formatWorkingHours(days) {
         dayEnd: '',
         hoursRange: schedule[day],
       }));
-  const result = [weekByDays[0]];
+  const [day] = weekByDays;
+  const result = [day];
   for (let i = 1; i < weekByDays.length; i++) {
     if (result[result.length - 1].hoursRange === weekByDays[i].hoursRange) {
       result[result.length - 1].dayEnd = weekByDays[i].dayStart;
@@ -73,8 +74,7 @@ export function formatWorkingHours(days) {
   return result
       .filter((item) => item.hoursRange)
       .map((day) => {
-        const dayEnd = day.dayEnd === '' ? '' : ' - ' + day.dayEnd;
-        return day.dayStart + dayEnd + ': ' + day.hoursRange;
-      }
-      );
+        const dayEnd = day.dayEnd === '' ? '' : ` - ${day.dayEnd}`;
+        return `${day.dayStart}${dayEnd}: ${day.hoursRange}`;
+      });
 }

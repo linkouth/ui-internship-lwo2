@@ -10,6 +10,6 @@
  * @return {Number}
  */
 export function bouncingBall(h, bounce, window) {
-  let times = Math.floor(Math.log(window / h) / Math.log(bounce));
+  const times = Math.floor(Math.log(window / h) / Math.log(bounce));
   return times * 2 + 1;
 }
