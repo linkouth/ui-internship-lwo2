@@ -11,7 +11,7 @@ export function deepClone(obj) {
   if (typeof obj !== 'object') {
     return obj;
   }
-  let result = {};
+  const result = {};
   for (const key in obj) {
     if (obj.hasOwnProperty(key)) {
       result[key] = deepClone(obj[key]);

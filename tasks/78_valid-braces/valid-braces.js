@@ -10,7 +10,7 @@
  * @return {Boolean}
  */
 export function validBraces(str) {
-  let stack = [];
+  const stack = [];
   for (const brace of str) {
     if (['(', '{', '['].includes(brace)) {
       stack.push(brace);

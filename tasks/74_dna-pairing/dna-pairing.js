@@ -9,8 +9,9 @@
  * @return {Array<Array<String>>}
  */
 export function pairElement(str) {
-  let elements = str.split('');
-  return elements.map((element) => [element, getDNAPair(element)]);
+  return str
+      .split('')
+      .map((element) => [element, getDNAPair(element)]);
 }
 
 /**

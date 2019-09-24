@@ -7,18 +7,19 @@
  * addTogether(2, 3);
  * // return 5
  * addTogether(2)(3);
+ * @param {Number} firstArg
+ * @param {Number} secondArg
  * @return {*}
  */
-export function addTogether(...args) {
-  const firstArg = args[0];
+export function addTogether(firstArg, secondArg) {
   if (typeof firstArg !== 'number') {
     return undefined;
   }
-  if (args.length === 2) {
-    if (typeof args[1] !== 'number') {
+  if (secondArg !== undefined) {
+    if (typeof secondArg !== 'number') {
       return undefined;
     }
-    return firstArg + args[1];
+    return firstArg + secondArg;
   }
   return (secondArg) => {
     if (typeof secondArg !== 'number') {

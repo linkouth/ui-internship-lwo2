@@ -8,12 +8,15 @@
  * @return {String}
  */
 export function binaryEncode(str) {
-  return str === undefined ? '' :
-  str
-      .split('')
-      .map((char) => {
-        const binary = char.charCodeAt().toString(2);
-        return '0'.repeat(8 - binary.length) + binary;
-      })
-      .join(' ');
+  if (str === undefined) {
+    return '';
+  } else {
+    return str
+        .split('')
+        .map((char) => {
+          const binary = char.charCodeAt().toString(2);
+          return '0'.repeat(8 - binary.length) + binary;
+        })
+        .join(' ');
+  }
 }
