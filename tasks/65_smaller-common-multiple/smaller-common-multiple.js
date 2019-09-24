@@ -13,23 +13,23 @@ export function smallestCommons(arr) {
   const max = Math.max(...arr);
   const min = Math.min(...arr);
   const range = getRange(min, max);
-  let currentLCM = lcm(range[0], range[1]);
+  let currentLCM = leastCommonMultiple(range[0], range[1]);
   for (let i = 1; i < range.length; i++) {
-    currentLCM = lcm(currentLCM, range[i]);
+    currentLCM = leastCommonMultiple(currentLCM, range[i]);
   }
   return currentLCM;
 }
 
 /**
- * gcd - finds greatest common division of two numbers
+ * greatestCommonDivision - finds greatest common division of two numbers
  * @example
  * // return 3
- * gcd(15, 12);
+ * greatestCommonDivision(15, 12);
  * @param {Number} a
  * @param {Number} b
  * @return {Number}
  */
-function gcd(a, b) {
+function greatestCommonDivision(a, b) {
   let tmp = null;
   while (b !== 0) {
     tmp = b;
@@ -40,20 +40,20 @@ function gcd(a, b) {
 }
 
 /**
- * lcm - finds least common multiple of two numbers
+ * leastCommonMultiple - finds least common multiple of two numbers
  * @example
  * // return 18
- * lcm(9, 6);
+ * leastCommonMultiple(9, 6);
  * @param {Number} a
  * @param {Number} b
  * @return {Number}
  */
-function lcm(a, b) {
-  return (a * b / gcd(a, b));
+function leastCommonMultiple(a, b) {
+  return (a * b / greatestCommonDivision(a, b));
 }
 
 /**
- * range - returns sequence of numbers that begins from start,
+ * getRange - returns sequence of numbers that begins from start,
  * finishes with end (includes)
  * @param {Number} start
  * @param {Number} end
