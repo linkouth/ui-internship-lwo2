@@ -17,7 +17,7 @@ export class LinkedList {
    */
   push(value) {
     const node = new LinkedListNode(value, this.tail);
-    if (this.head === null) {
+    if (!this.head) {
       this.head = node;
     }
     if (this.tail !== null) {
@@ -36,7 +36,7 @@ export class LinkedList {
    * @return {*}
    */
   pop() {
-    if (this.tail === null) {
+    if (!this.tail) {
       return null;
     }
     let lastNode = this.tail;
@@ -57,7 +57,7 @@ export class LinkedList {
     while (curr !== null && curr.value !== valueToFind) {
       curr = curr.next;
     }
-    if (curr === null) {
+    if (!curr) {
       return false;
     }
 
@@ -84,7 +84,7 @@ export class LinkedList {
     while (curr !== null && curr.value !== valueToRemove) {
       curr = curr.next;
     }
-    if (curr === null) {
+    if (!curr) {
       return false;
     }
     if (curr === this.head) {

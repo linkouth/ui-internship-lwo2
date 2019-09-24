@@ -58,8 +58,8 @@ export class Person {
    * @return {void}
    */
   setFullName(firstAndLast) {
-    const names = firstAndLast.split(' ');
-    this.setFirstName(names[0]);
-    this.setLastName(names[1]);
+    const [firstName, secondName] = firstAndLast.split(' ');
+    this.setFirstName(firstName);
+    this.setLastName(secondName);
   }
 }

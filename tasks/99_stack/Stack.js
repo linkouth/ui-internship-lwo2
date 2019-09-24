@@ -28,7 +28,7 @@ export class Stack {
    * @return {*}
    */
   pop() {
-    if (this.last === null) {
+    if (!this.last) {
       return null;
     }
     const lastNode = this.last;
@@ -44,7 +44,7 @@ export class Stack {
    * @return {Boolean}
    */
   isEmpty() {
-    return this.size === 0;
+    return !!this.size;
   }
 }
 

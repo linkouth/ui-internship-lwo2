@@ -11,24 +11,17 @@
  * @return {String}
  */
 export function fatFingers(str) {
-  if (str.length === 0) {
+  if (!str.length) {
     return '';
   }
   let result = '';
   let isCaps = false;
-  // if (str[0].toUpperCase() === 'A') {
-  //   isCaps = true;
-  // } else {
-  //   result += str[0];
-  // }
   for (const ch of str) {
     if (ch.toUpperCase() === 'A') {
       isCaps = !isCaps;
     } else {
       if (isCaps) {
-        result += isUpperCase(ch) ?
-        ch.toLowerCase():
-        ch.toUpperCase();
+        result += isUpperCase(ch) ? ch.toLowerCase(): ch.toUpperCase();
       } else {
         result += ch;
       }
