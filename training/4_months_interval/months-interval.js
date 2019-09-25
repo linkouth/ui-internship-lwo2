@@ -29,10 +29,14 @@ export function monthsInterval(date1, date2) {
   monthNumbers = monthNumbers
       .filter((value, index) => monthNumbers.indexOf(value) === index)
       .sort((a, b) => a - b);
-  const monthNames = ['January', 'February', 'March', 'April', 'May',
-    'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   return monthNumbers.map((number) => monthNames[number]);
 }
+
+const monthNames = [
+  'January', 'February', 'March', 'April',
+  'May', 'June', 'July', 'August',
+  'September', 'October', 'November', 'December',
+];
 
 /**
  * max - returns max of two dates

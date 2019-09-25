@@ -31,16 +31,16 @@
  * @return {void}
  */
 export function populateTable(students) {
-  let table = document.createElement('table');
+  const table = document.createElement('table');
   document.body.appendChild(table);
-  let thead = table.insertRow();
+  const thead = table.insertRow();
   const headers = Object.keys(students[0]);
   for (const header of headers) {
-    let td = thead.insertCell();
+    const td = thead.insertCell();
     td.innerHTML = header;
   }
   for (const student of students) {
-    let tr = table.insertRow();
+    const tr = table.insertRow();
     for (const prop in student) {
       if (student.hasOwnProperty(prop)) {
         const cell = tr.insertCell();
