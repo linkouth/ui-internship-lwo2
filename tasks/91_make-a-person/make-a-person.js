@@ -15,7 +15,7 @@ export class Person {
    * @return {String}
    */
   getFirstName() {
-    return this.firstName;
+    return this._firstName;
   }
 
   /**
@@ -23,7 +23,7 @@ export class Person {
    * @return {String}
    */
   getLastName() {
-    return this.lastName;
+    return this._lastName;
   }
 
   /**
@@ -31,7 +31,7 @@ export class Person {
    * @return {String}
    */
   getFullName() {
-    return this.firstName + ' ' + this.lastName;
+    return this._firstName + ' ' + this._lastName;
   }
 
   /**
@@ -40,7 +40,7 @@ export class Person {
    * @return {void}
    */
   setFirstName(first) {
-    this.firstName = first;
+    this._firstName = first;
   }
 
   /**
@@ -49,7 +49,7 @@ export class Person {
    * @return {void}
    */
   setLastName(last) {
-    this.lastName = last;
+    this._lastName = last;
   }
 
   /**
