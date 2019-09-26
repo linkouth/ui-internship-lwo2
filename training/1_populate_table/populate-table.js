@@ -32,7 +32,6 @@
  */
 export function populateTable(students) {
   const table = document.createElement('table');
-  document.body.appendChild(table);
   const thead = table.insertRow();
   const headers = Object.keys(students[0]);
   for (const header of headers) {
@@ -52,4 +51,5 @@ export function populateTable(students) {
       }
     }
   }
+  document.body.appendChild(table);
 }
